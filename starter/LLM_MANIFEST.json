@@ -1,0 +1,25 @@
+{
+  "projectKind": "cloudflare-worker-hono",
+  "modes": [
+    "api-only",
+    "fullstack-vite"
+  ],
+  "options": {
+    "neon": {
+      "enabledByDefault": false,
+      "envVar": "NEON_DATABASE_URL"
+    },
+    "r2": {
+      "enabledByDefault": false,
+      "binding": "ASSETS"
+    },
+    "kv": {
+      "enabledByDefault": false,
+      "binding": "APP_KV"
+    }
+  },
+  "postInstallCommands": [
+    "npm run dev"
+  ],
+  "checklist": "LLM_TASKS.md"
+}
